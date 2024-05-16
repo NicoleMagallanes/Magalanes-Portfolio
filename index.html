@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive portfolio website Nicole Magallanes</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/core.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+  <section>
+    <div class="icon-container">
+      <div class="icon-box about" data-modal="about">
+        <i class="fa-regular fa-address-card"></i>
+      </div>
+      <div class="icon-box projects" data-modal="projects">
+        <i class="fa-solid fa-laptop-code"></i>
+      </div>
+      <div class="icon-box achievement" data-modal="achievement">
+        <i class="fa-solid fa-users-rectangle"></i>
+      </div>
+      <div class="icon-box contact" data-modal="contact">
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+    </div>
+  </section>
+
+  <div class="popup" id="about">
+    <div class="popup-container">
+      <div class="popup-header">
+        <div class="button-container">
+          <button class="close-btn circle-btn red">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button class="close-btn circle-btn yellow">
+            <i class="fa-solid fa-window-minimize"></i>
+          </button>
+          <button class="maximize-btn circle-btn green">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </button>
+        </div>
+      </div>
+      <div class="popup-body about-container">
+        <div class="img-frame">
+          <img src="https://i.ibb.co/9t91XxS/139911877-220379813056934-7270073243685105961-n.jpg"
+            alt="139911877-220379813056934-7270073243685105961-n" />
+        </div>
+        <div class="hero-content">
+          <h1>Nicole Magallanes</h1>
+          <p>
+            I'm a Highly motivated Software Engineer and Full-Stack Web Developer with a passion for creating efficient,
+            user-friendly websites. Experienced in front-end and back-end development, utilizing various tools and
+            technologies. Committed to delivering high-quality code and collaborating effectively with teams to achieve
+            project goals.
+          </p>
+          <br>
+          <h1>Education</h1>
+          <p>Currently: 3rd Year College in iAcademy Makati</p>
+          <p>Bachelor of Science in Computer Science major in Software Engineering</p>
+          <p>2019 - Present</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup" id="projects">
+    <div class="popup-container">
+      <div class="popup-header">
+        <div class="button-container">
+          <button class="close-btn circle-btn red">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button class="close-btn circle-btn yellow">
+            <i class="fa-solid fa-window-minimize"></i>
+          </button>
+          <button class="maximize-btn circle-btn green">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="popup-body">
+        <div class="skill-list">
+          <h1>Skills</h1>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Javascript</li>
+            <li>React</li>
+            <li>Laravel</li>
+            <li>Bootstrap</li>
+            <li>Tailwind CSS</li>
+            <li>Python</li>
+            <li>PHP</li>
+            <li>Next.js</li>
+            <li>MySQL</li>
+          </ul>
+        </div>
+
+        <div class="project-container">
+          <h1>Projects</h1>
+          <div class="all-projects">
+            <div class="project-box">
+              <img src="https://i.ibb.co/N3NscWT/Captusadasdasdre.jpg" alt="" />
+              <div class="overlay">
+                <h3>Junk 9003</h3>
+                <button class="more-btn">
+                  <span>Learn More</span>
+                </button>
+                <div class="custom-model-main">
+                  <div class="custom-model-inner">
+                    <div class="close-btnn">×</div>
+                    <div class="custom-model-wrap">
+                      <div class="pop-up-content-wrap">
+                        <h2>Junk 9003</h2>
+                        <p><strong>Jan 2019</strong></p>
+                        <p>The title of our game is "JUNK 9003". It is based on RA 9003, an advanced legislation
+                          regarding the Philippines Waste Management System.</p>
+                        <p>Created with GODOT for a Final Exam.</p>
+                        <p>Experienced in Sprite Making and Pixel Animation.</p>
+                        <p>Supervised a team of 5.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-overlay"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-box">
+              <img src="https://i.ibb.co/cX34MVc/Captasdadasdure.jpg" alt="" />
+              <div class="overlay">
+                <h3>Nix Pet Boarding Hotel</h3>
+                <button class="more-btn">
+                  <span>Learn More</span>
+                </button>
+                <div class="custom-model-main">
+                  <div class="custom-model-inner">
+                    <div class="close-btnn">×</div>
+                    <div class="custom-model-wrap">
+                      <div class="pop-up-content-wrap">
+                        <h2>Nix Pet Boarding Hotel</h2>
+                        <p><strong>Feb 2023 - Mar 2023</strong></p>
+                        <p>KodeGo Bootcamp Project - Mini Project 1.</p>
+                        <p>Created a Pet Grooming Service and Pet Boarding Hotel Booking website using HTML, CSS, and
+                          JavaScript.</p>
+                        <p>Developed the project individually.</p>
+                        <p>Utilized Visual Studio Code for code editing.</p>
+                        <p><a href="https://nicolemagallanes.github.io/" target="_blank">View Project</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-overlay"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-box">
+              <img src="https://i.ibb.co/ZX0Qg7T/Caasdadsadpture.jpg" alt="" />
+              <div class="overlay">
+                <h3>Doggo Ph</h3>
+                <button class="more-btn">
+                  <span>Learn More</span>
+                </button>
+                <div class="custom-model-main">
+                  <div class="custom-model-inner">
+                    <div class="close-btnn">×</div>
+                    <div class="custom-model-wrap">
+                      <div class="pop-up-content-wrap">
+                        <h2>Doggo Ph</h2>
+                        <p><strong>Mar 2023 - Apr 2023</strong></p>
+                        <p>KodeGo Bootcamp Project - Mini Project 2 with Paul.</p>
+                        <p>Developed an E-Commerce website using Commerce.js API, JavaScript, React.js, CSS, and HTML.
+                        </p>
+                        <p>Collaborated with a partner, focusing on back-end development while my partner handled the
+                          front-end.</p>
+                        <p>Utilized Visual Studio Code for code editing.</p>
+                        <p><a href="https://doggoph.netlify.com/" target="_blank">View Project</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-overlay"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-box">
+              <img src="https://i.ibb.co/VDvtQyK/Capturesfadasd.jpg" alt="" />
+              <div class="overlay">
+                <h3>Humble Host</h3>
+                <button class="more-btn">
+                  <span>Learn More</span>
+                </button>
+                <div class="custom-model-main">
+                  <div class="custom-model-inner">
+                    <div class="close-btnn">×</div>
+                    <div class="custom-model-wrap">
+                      <div class="pop-up-content-wrap">
+                        <h2>Humble Host</h2>
+                        <p><strong>Apr 2023 - June 2023</strong></p>
+                        <p>KodeGo Bootcamp Capstone Project with Paul, Emmelloyd, and Revelyn.</p>
+                        <p>Collaborated on the development of a Hotel Booking Platform using Unsplash API, JavaScript,
+                          React.js, CSS, HTML, Laravel Blade, and Laragon.</p>
+                        <p>Focused on back-end development while my partners handled the front-end.</p>
+                        <p>Utilized Visual Studio Code for code editing.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-overlay"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-box">
+              <img src="https://i.ibb.co/VpNbsTv/GRENWARECapture.jpg" alt="" />
+              <div class="overlay">
+                <h3>Greenware</h3>
+                <button class="more-btn">
+                  <span>Learn More</span>
+                </button>
+                <div class="custom-model-main">
+                  <div class="custom-model-inner">
+                    <div class="close-btnn">×</div>
+                    <div class="custom-model-wrap">
+                      <div class="pop-up-content-wrap">
+                        <h2>Greenware</h2>
+                        <p><strong>June 2023 - July 2023</strong></p>
+                        <p>Greenware is an online marketplace that offers a wide range of eco-friendly products. Our
+                          website is designed to provide a seamless shopping experience with a focus on sustainability
+                          and environmentally conscious choices.</p>
+                        <p>2nd Year College School Final Project.</p>
+                        <p>Created with Next.js, Tailwind, ShadcnUi, and TRPC.</p>
+                        <p><a href="https://greenware-trpc.vercel.app/" target="_blank">View Project</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-overlay"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="popup" id="achievement">
+    <div class="popup-container">
+      <div class="popup-header">
+        <div class="button-container">
+          <button class="close-btn circle-btn red">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button class="close-btn circle-btn yellow">
+            <i class="fa-solid fa-window-minimize"></i>
+          </button>
+          <button class="maximize-btn circle-btn green">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </button>
+        </div>
+      </div>
+      <div class="popup-body achievement-container">
+        <h1>Achievements</h1>
+
+        <div class="slider-container">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="achievement-card">
+                  <img class="achievement-image"
+                    src="https://i.ibb.co/g3vMcNH/Capsadadasdture.jpg"
+                    alt="Achievement Image">
+                  <h2>Certificate of Appreciation in Career Talk Show</h2>
+                  <p>Career Talk Show</p>
+                  <p>Feb 6th 2023</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="achievement-card">
+                  <img class="achievement-image"
+                    src="https://i.ibb.co/K913LH4/Captuadasdadsare.jpg"
+                    alt="Achievement Image">
+                    <h2>Work Immersion</h2>
+                    <p>Co - Create for Climate</p>
+                    <p>May 3rd 2021</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="achievement-card">
+                  <img class="achievement-image"
+                    src="https://i.ibb.co/z29RwjY/Captasdasdasdure.jpg"
+                    alt="Achievement Image">
+                    <h2>Dean's Lister</h2>
+                    <p>Academic Achievements</p>
+                    <p>January 31st 2022</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="achievement-card">
+                  <img class="achievement-image"
+                    src="https://i.ibb.co/rF3Pmjg/Captursadasdade.jpg"
+                    alt="Achievement Image">
+                    <h2>Dean's Lister</h2>
+                    <p>Academic Achievements</p>
+                    <p>June 4th 2022</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide swiper-no-swiping">
+                <div class="achievement-card">
+                  <img class="achievement-image"
+                    src="https://i.ibb.co/MZZYzrb/sdsfasd.jpg"
+                    alt="Achievement Image">
+                    <h2>Certificate of Completion in KodeGo</h2>
+                    <p>Academic Achievements</p>
+                    <p>February 2023 - June 2023</p>
+                </div>
+              </div>
+            </div>
+            <ul class="control" id="custom-control">
+              <li class="prev">
+                <ion-icon class="arrow" name="caret-back-outline"></ion-icon>
+              </li>
+              <li class="next">
+                <ion-icon class="arrow" name="caret-forward-outline"></ion-icon>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup" id="contact">
+    <div class="popup-container">
+      <div class="popup-header">
+        <div class="button-container">
+          <button class="close-btn circle-btn red">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button class="close-btn circle-btn yellow">
+            <i class="fa-solid fa-window-minimize"></i>
+          </button>
+          <button class="maximize-btn circle-btn green">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </button>
+        </div>
+      </div>
+      <div class="popup-body contact-container">
+        <h1>Contact</h1>
+        <p>Hi there, you can contact with me via email or this social medias below.</p>
+        <p>Phone: 0995-033-9425</p>
+  <p>Email: nicolemagallanes026@gmail.com</p>
+  <p>Address: Moonwalk, Paranaque City</p>
+        <section id="relevant-links">
+          <ul>
+            <li><a href="https://github.com/NicoleMagallanes" target="_blank"><i class="fab fa-github"></i> Github</a></li>
+            <li><a href="https://www.linkedin.com/in/nicole-magallanes-68b89b1b6/" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a></li>
+            <li><a href="https://main--nicolemagallanes.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Portfolio</a></li>
+          </ul>
+        </section>
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name.." />
+
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="Your mail.." />
+
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height: 200px"></textarea>
+
+          <button class="submit-btn more-btn" type="submit">
+            <span>Submit <i class="fa-solid fa-paper-plane"></i></span>
+          </button>                          
+        </form>            
+        
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
