@@ -379,6 +379,7 @@ body.prevent-background-scroll {
   place-items: center;
   gap: 30px;
   padding: 30px;
+  justify-content: center;
 }
 
 .all-projects img {
