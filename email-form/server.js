@@ -8,22 +8,20 @@ const port = 5500;
 
 // Middleware to parse incoming form data
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json()); // In case you need to parse JSON data
+app.use(bodyParser.json());
 app.use(cors()); // Enable CORS
 
 app.post("/send-email", (req, res) => {
   const { name, email, subject } = req.body;
 
-  // Set up transporter
   let transporter = nodemailer.createTransport({
-    service: "gmail", // Use your email service
+    service: "gmail",
     auth: {
-      user: "your-email@gmail.com", // Your email
-      pass: "your-email-password", // Your email password
+      user: "nicolemagallanes026@gmail.com",
+      pass: "Djangolove26",
     },
   });
 
-  // Email options
   let mailOptions = {
     from: email,
     to: "nicolemagallanes026@gmail.com",
@@ -31,7 +29,6 @@ app.post("/send-email", (req, res) => {
     text: `You have received a new message from ${name} (${email}):\n\n${subject}`,
   };
 
-  // Send email
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       return res.status(500).send(error.toString());

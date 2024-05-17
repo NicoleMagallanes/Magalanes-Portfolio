@@ -16,7 +16,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/core.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="email-form/server.js"></script>
 </head>
 
 <body>
@@ -394,37 +393,8 @@
       </div>
     </div>
   </div>
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent the default form submission
+  <script src="email-form/server.js"></script>
 
-      // Capture form data
-      const formData = new FormData(this);
-
-      // Send the form data to the server using Fetch API
-      fetch('http://127.0.0.1:5500/send-email', {
-        method: 'POST',
-        body: formData,
-      })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok ' + response.statusText);
-        }
-        return response.text(); // or response.json() if your server sends JSON
-      })
-      .then(data => {
-        console.log('Success:', data);
-        alert('Email sent successfully!');
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        alert('Failed to send email.');
-      });
-
-      // Optionally, reset the form
-      this.reset();
-    });
-  </script>
   <script src="js/main.js"></script>
 </body>
 

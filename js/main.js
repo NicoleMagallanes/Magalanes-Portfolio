@@ -93,3 +93,44 @@ $(document).ready(function () {
     $(".custom-model-main").removeClass("model-open");
   });
 });
+
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Capture form data
+    const formData = new FormData(this);
+
+    // Convert form data to JSON
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      subject: formData.get("subject"),
+    };
+
+    fetch("http://127.0.0.1:5500/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok " + response.statusText);
+        }
+        return response.text(); // or response.json() if your server sends JSON
+      })
+      .then((data) => {
+        console.log("Success:", data);
+        alert("Email sent successfully!");
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        alert("Failed to send email.");
+      });
+
+    // Optionally, reset the form
+    this.reset();
+  });
