@@ -374,22 +374,21 @@
             <li><a href="https://www.linkedin.com/in/nicole-magallanes-68b89b1b6/" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a></li>
             <li><a href="https://main--nicolemagallanes.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Portfolio</a></li>
           </ul>
-        </section>
-        <form id="contactForm" action="http://127.0.0.1:5500/send-email" method="POST">
+        </section>  
+        <!--https://app.getform.io/forms/lbkmxllb#-->
+        <form action="https://getform.io/f/lbkmxllb" method="POST">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Your name.." required />
       
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="Your mail.." required />
       
-          <label for="subject">Subject</label>
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height: 200px" required></textarea>
-      
-          <button class="submit-btn more-btn" type="submit">
-            <span>Submit <i class="fa-solid fa-paper-plane"></i></span>
-          </button>
-        </form>   
-                        
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Write something.." style="height: 200px" required></textarea>
+          <!-- add hidden Honeypot input to prevent spams -->
+          <input type="hidden" name="_gotcha" style="display:none !important">
+          <button class="submit-btn more-btn" type="submit"> Send <i class="fa-solid fa-paper-plane"></i></button>
+        </form>               
       </div>
     </div>
   </div>

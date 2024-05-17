@@ -457,6 +457,7 @@ body.prevent-background-scroll {
   background-color: transparent;
   margin-top: 20px;
   cursor: pointer;
+  color: #fff;
 }
 
 .more-btn::before {
