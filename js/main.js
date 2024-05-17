@@ -93,3 +93,28 @@ $(document).ready(function () {
     $(".custom-model-main").removeClass("model-open");
   });
 });
+
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value;
+
+    console.log("Email:", email);
+
+    const formData = new FormData(this);
+    fetch("your-server-endpoint", {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+
+    this.reset();
+  });

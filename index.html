@@ -376,20 +376,21 @@
             <li><a href="https://main--nicolemagallanes.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Portfolio</a></li>
           </ul>
         </section>
-        <form>
+        <form id="contactForm">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your name.." />
-
+          <input type="text" id="name" name="name" placeholder="Your name.." required />
+        
           <label for="email">Email</label>
-          <input type="text" id="email" name="email" placeholder="Your mail.." />
-
+          <input type="email" id="email" name="email" placeholder="Your mail.." required />
+        
           <label for="subject">Subject</label>
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height: 200px"></textarea>
-
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height: 200px" required></textarea>
+        
           <button class="submit-btn more-btn" type="submit">
             <span>Submit <i class="fa-solid fa-paper-plane"></i></span>
-          </button>                          
-        </form>            
+          </button>
+        </form>
+                 
         
       </div>
     </div>
