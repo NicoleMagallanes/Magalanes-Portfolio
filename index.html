@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/core.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+<script src="email-form/server.js"></script>
 </head>
 
 <body>
@@ -376,26 +376,55 @@
             <li><a href="https://main--nicolemagallanes.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Portfolio</a></li>
           </ul>
         </section>
-        <form id="contactForm">
+        <form id="contactForm" action="http://127.0.0.1:5500/send-email" method="POST">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Your name.." required />
-        
+      
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="Your mail.." required />
-        
+      
           <label for="subject">Subject</label>
           <textarea id="subject" name="subject" placeholder="Write something.." style="height: 200px" required></textarea>
-        
+      
           <button class="submit-btn more-btn" type="submit">
             <span>Submit <i class="fa-solid fa-paper-plane"></i></span>
           </button>
-        </form>
-                 
-        
+        </form>   
+                        
       </div>
     </div>
   </div>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
 
+      // Capture form data
+      const formData = new FormData(this);
+
+      // Send the form data to the server using Fetch API
+      fetch('http://127.0.0.1:5500/send-email', {
+        method: 'POST',
+        body: formData,
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.text(); // or response.json() if your server sends JSON
+      })
+      .then(data => {
+        console.log('Success:', data);
+        alert('Email sent successfully!');
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to send email.');
+      });
+
+      // Optionally, reset the form
+      this.reset();
+    });
+  </script>
   <script src="js/main.js"></script>
 </body>
 

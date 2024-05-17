@@ -623,7 +623,7 @@ form {
 
 input[type="text"],
 select,
-textarea {
+textarea, input[type="email"], input[type="subject"]{
   font-size: 1rem;
   width: 100%;
   padding: 14px;
